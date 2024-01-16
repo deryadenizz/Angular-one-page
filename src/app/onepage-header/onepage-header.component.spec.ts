@@ -8,10 +8,9 @@ describe('OnepageHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OnepageHeaderComponent]
-    })
-    .compileComponents();
-    
+      imports: [OnepageHeaderComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(OnepageHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

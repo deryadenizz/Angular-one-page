@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-onepage-footer',
   standalone: true,
-  imports: [],
+  imports: [CommonModule], // CommonModule ekleyin
   templateUrl: './onepage-footer.component.html',
-  styleUrl: './onepage-footer.component.css'
+  styleUrls: ['./onepage-footer.component.css'],
 })
 export class OnepageFooterComponent {
-
+  currentDate: Date = new Date();
 }

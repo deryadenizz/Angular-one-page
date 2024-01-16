@@ -2,13 +2,44 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
+// Header, Main, Footer
+import { OnepageHeaderComponent } from './onepage-header/onepage-header.component';
+import { OnepageNavbarComponent } from './onepage-navbar/onepage-navbar.component';
+import { OnepageMainComponent } from './onepage-main/onepage-main.component';
+import { OnepageFooterComponent } from './onepage-footer/onepage-footer.component';
+import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
+
+// Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
+  // Html tag'i oluşturmak
   selector: 'app-root',
+
+  // Bu componentin tek başına kullanmamıza olanak sağlar
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+
+  // Eğer Component veya Module ekliyorsanız burada olmak zorundadır.
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    OnepageProjectNameComponent,
+    OnepageHeaderComponent,
+    OnepageMainComponent,
+    OnepageFooterComponent,
+    OnepageNavbarComponent,
+  ],
+
+  // Html'de bu componentte kullanacağımız html dosyası
+  // template:  Html kullanmadan direk html kodlarını template:``
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+
+  // Css'de bu componentte kullanacağımız css dosyası
+  styleUrl: './app.component.css',
 })
+
+// EXPORT: bu classı dışarda çağırmak istiyorsak
 export class AppComponent {
-  title = 'one-page';
+  // TS(TypeScript kodlarını buraya yazabiliriz)
+  name = 'Hamit';
+  surname = 'Mızrak';
+  projectName = 'One Page';
 }
