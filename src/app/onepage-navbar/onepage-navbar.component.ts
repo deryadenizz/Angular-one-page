@@ -1,14 +1,49 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { User, UserRole } from './User';
 
 @Component({
   selector: 'app-onepage-navbar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './onepage-navbar.component.html',
   styleUrl: './onepage-navbar.component.css',
 })
 export class OnepageNavbarComponent {
   homePage: String = 'Anasayfa 44';
+  username: String = 'Derya Deniz';
+  User: User[] = [
+    {
+      id: 1,
+      username: 'Derya Deniz',
+      email: 'deryanaral@gmail.com',
+      password: '987654',
+      pictures: '',
+      date: String(new Date().getFullYear()),
+      link: 'https://admin1',
+      role: UserRole.Admin,
+    },
+    {
+      id: 2,
+      username: 'writer1',
+      email: 'writer@gmail.com',
+      password: '987654',
+      pictures: '',
+      date: String(new Date().getFullYear()),
+      link: 'https://writer1',
+      role: UserRole.Writer,
+    },
+    {
+      id: 3,
+      username: 'user1',
+      email: 'user@gmail.com',
+      password: '987654',
+      pictures: '',
+      date: String(new Date().getFullYear()),
+      link: 'https://user1',
+      role: UserRole.User,
+    },
+  ];
 
   // navBar adında bir obje oluşturunuz.
   // Logo(string), link(string), search, attribute oluşturuyorsunuz.
@@ -25,7 +60,7 @@ export class OnepageNavbarComponent {
       logoTitle: string;
     };
     navbar: Array<any>;
-    search: {};
+    search: { name: string; placeholder: string; type: string; style: string };
   } = {
     isLogin: true,
     logo: {
@@ -52,6 +87,7 @@ export class OnepageNavbarComponent {
       name: 'Search',
       placeholder: 'Arama için ...',
       type: 'text',
+      style: 'btn btn-primary',
     },
   }; //navBar Object
 }

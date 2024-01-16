@@ -49,28 +49,32 @@
             {{ navBar.navbar[3].name }}
           </a>
         </li>
-        <!-- <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="dropdownId"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        >Dropdown</a
-                    >
-                    <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownId"
-                    >
-                        <a class="dropdown-item" href="#"
-                            >Action 1</a
-                        >
-                        <a class="dropdown-item" href="#"
-                            >Action 2</a
-                        >
-                    </div>
-                </li> -->
+        <ng-container *ngIf="navBar.isLogin; then loggedInd; else loggedOut">
+        </ng-container>
+        <ng-template #loggedInd>
+          <li class="nav-item">
+            <a class="nav-link" href="{#">
+              Hoşgeldiniz, {{ User[0].username }}
+            </a>
+          </li>
+        </ng-template>
+        <ng-template #loggedOut>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Login</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Login</a>
+              <a class="dropdown-item" href="#">Register</a>
+            </div>
+          </li>
+        </ng-template>
       </ul>
       <form class="d-flex my-2 my-lg-0">
         <input class="form-control me-sm-2" type="text" placeholder="" />
