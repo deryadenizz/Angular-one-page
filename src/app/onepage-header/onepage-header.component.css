@@ -1,0 +1,63 @@
+#header_id {
+  margin-top: 3.5rem;
+  background-image: url(https://www.mashed.com/img/gallery/when-you-eat-coffee-grounds-this-is-what-happens/l-intro-1617720158.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  z-index: -1;
+  padding-top: 20rem;
+}
+
+#back_to_top_id {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgb(40, 40, 40);
+  color: bisque;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+#back_to_top_id:hover {
+  width: 9rem;
+  border-radius: 2rem;
+}
+
+#back_to_top_id div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#back_to_top_id i {
+  margin-left: 2rem;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#back_to_top_id:hover i {
+  opacity: 0;
+}
+
+#back_to_top_id span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#back_to_top_id:hover span {
+  opacity: 1;
+}
