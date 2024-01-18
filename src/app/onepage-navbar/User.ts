@@ -34,9 +34,9 @@ abstract class Person {
     this.link = link;
   }
   //Method(Gövdeli)
-  personInfo(): void {
+  /*  personInformation(): void {
     console.log('Gövdeli Method');
-  }
+  } */
 }
 
 export class User extends Person {
