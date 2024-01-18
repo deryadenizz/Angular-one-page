@@ -1,10 +1,11 @@
-export enum UserRole {
-  Admin = 'admin',
-  Writer = 'writer',
-  User = 'user',
+// ENUM
+export enum userRolles {
+  admin = 'ADMIN',
+  writer = 'WRITER',
+  user = 'USER',
 }
-//rolles:Dizi
-//Abstract
+
+// ABSTRACT
 abstract class Person {
   //Field
   id: number;
@@ -33,18 +34,23 @@ abstract class Person {
     this.date = date;
     this.link = link;
   }
-  //Method(Gövdeli)
-  /*  personInformation(): void {
-    console.log('Gövdeli Method');
-  } */
-}
 
+  //Method (Gövdeli)
+  //   personInformation():void{
+  //     console.log("Gövdeli method");
+  //   }
+  //Method (Gövdesiz)
+} //end abstract
+
+// INTERFACE
+
+// User
 export class User extends Person {
-  //Field
+  // Field
+  // rolles:Array<any>;
+  rolles: string;
 
-  role: string;
-
-  //Constructor
+  // Constructor
   constructor(
     id: number,
     username: string,
@@ -53,13 +59,13 @@ export class User extends Person {
     pictures: string,
     date: string,
     link: string,
-    role: string
+    rolles: string
   ) {
-    super(id, username, email, password, pictures, date, link);
-    this.role = role;
+    super(id, username, email, password, pictures, date, link); // abstract'ten gelen
+    this.rolles = rolles;
   }
-  //Method
-  // rolles: Enum (admin,writer,user)
-
-  // rolles: Dizi
+  // Method
 }
+
+// Person nesnesinden abstract
+// TypeScript Enum

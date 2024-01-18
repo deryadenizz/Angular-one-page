@@ -7,7 +7,7 @@ import { OnepageHeaderComponent } from './onepage-header/onepage-header.componen
 import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 import { OnepageFooterComponent } from './onepage-footer/onepage-footer.component';
 import { OnepageProjectNameComponent } from './onepage-project-name/onepage-project-name.component';
-import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.component';
+import { OnePageNavbarComponent } from './onepage-navbar/onepage-navbar.component';
 
 // Dikkat: Bütün Componentleri buraya eklemek zorundayız
 @Component({
@@ -39,7 +39,7 @@ import { OnePageNavbarComponent } from './one-page-navbar/one-page-navbar.compon
 // EXPORT: bu classı dışarda çağırmak istiyorsak
 export class AppComponent {
   // TS(TypeScript kodlarını buraya yazabiliriz)
-  name = 'Hamit';
-  surname = 'Mızrak';
+  name = 'Derya';
+  surname = 'Deniz';
   projectName = 'One Page';
 }

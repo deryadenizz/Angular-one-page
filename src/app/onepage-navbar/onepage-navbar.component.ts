@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 // Component
 @Component({
   // Html Template
-  selector: 'app-one-page-navbar',
+  selector: 'app-onepage-navbar',
 
   // Bu component tek başına çalışsın
   standalone: true,
@@ -14,10 +14,10 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
 
   // Html Template
-  templateUrl: './one-page-navbar.component.html',
+  templateUrl: './onepage-navbar.component.html',
 
   // Css Template
-  styleUrl: './one-page-navbar.component.css',
+  styleUrl: './onepage-navbar.component.css',
 })
 
 // EXPORT
@@ -29,8 +29,8 @@ export class OnePageNavbarComponent {
   User: User[] = [
     {
       id: 1,
-      username: 'Hamit Mizrak',
-      email: 'hamitmizrak@gmail.com',
+      username: 'Derya Deniz',
+      email: 'derya@gmail.com',
       password: '123456',
       pictures:
         'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
